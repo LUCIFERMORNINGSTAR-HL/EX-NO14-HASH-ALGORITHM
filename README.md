@@ -27,9 +27,25 @@ To implement HASH ALGORITHM
 
 
 ## Program:
+```PYTHON
+# Simple Hash Algorithm (Beginner Friendly)
 
+def simple_hash(message):
+    total = 0
+    for c in message:
+        total += ord(c)
+    h = (total * 7 + len(message) * 13) % 256
+    return h
 
+message = input("Enter message: ")
+
+h = simple_hash(message)
+
+print("\nHash Value:", h)
+
+```
 ## Output:
+<img width="407" height="169" alt="image" src="https://github.com/user-attachments/assets/dd4702c3-bd72-4763-9cfd-1a9cb1c8ea16" />
 
 ## Result:
 The program is executed successfully.
